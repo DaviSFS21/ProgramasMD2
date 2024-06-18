@@ -1,4 +1,4 @@
-print("O programa irá mostrar a matriz de igualdade de dois conjuntos.")
+print("O programa irá comparar elementos iguais de dois conjuntos.")
 
 conj_a = []
 conj_b = []
@@ -10,32 +10,30 @@ while True:
     valor = input('> ')
     if valor == '/':
         break
-    pos += 1
-    conj_a[pos] = valor
-
-pos = 0
+    conj_a.append(valor)
 
 print("Digite os valores do conjunto B (digite '/' para encerrar a leitura): ")
 while True:
     valor = input('> ')
     if valor == '/':
         break
-    conj_b[pos] = valor
+    conj_b.append(valor)
 
-print("A matriz de AxB é:")
+print("A matriz que indica os elementos iguais é:")
+print(conj_a)
 
-produto = '__|_' + conj_b[0]
+result = '__|_' + conj_b[0]
 for j in range(1, len(conj_b)):
-    produto += '_|_' + conj_b[j]
+    result += '_|_' + conj_b[j]
 
-produto += "_|"
+result += "_|"
 
 for i in range(len(conj_a)):
-    produto += "\n" + conj_a[i] + " | "
+    result += "\n" + conj_a[i] + " | "
     for j in range(len(conj_b)):
         if conj_a[i] == conj_b[j]:
-            produto += "1 | "
+            result += "1 | "
         else:
-            produto += "0 | "
+            result += "0 | "
 
-print(produto)
+print(result)
