@@ -17,9 +17,9 @@ for line in range(3):
     for col in range(3):
         while True:
             for count in range(3): print(matriz[count])
-            valor = input("Digite um valor(0 ou 1): ")
+            valor = int(input("Digite um valor(0 ou 1): "))
             os.system('cls')
-            if (valor == '0') or (valor == '1'):
+            if (valor == 0) or (valor == 1):
                 matriz[line][col] = valor
                 break
 
