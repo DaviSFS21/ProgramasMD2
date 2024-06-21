@@ -20,7 +20,6 @@ while True:
     conj_b.append(valor)
 
 print("A matriz que indica os elementos iguais é:")
-print(conj_a)
 
 result = '__|_' + conj_b[0]
 for j in range(1, len(conj_b)):
@@ -37,3 +36,5 @@ for i in range(len(conj_a)):
             result += "0 | "
 
 print(result)
+
+input("Pressione Enter para encerrar o programa")
